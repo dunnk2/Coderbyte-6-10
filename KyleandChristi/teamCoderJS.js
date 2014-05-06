@@ -58,7 +58,7 @@ alert(SimpleSymbols("f++d+")); */
 return the string true if num2 is greater than num1, otherwise return the string false. If the parameter values are 
 equal to each other then return the string -1. 
 
-    Use the Parameter Testing feature in the box below to test your code with different arguments. */
+    Use the Parameter Testing feature in the box below to test your code with different arguments.
 
 function checkNums(num1, num2) {
 
@@ -77,3 +77,25 @@ function checkNums(num1, num2) {
 }
 
 alert(checkNums(47, 47));
+
+*/
+
+/*Lesson 8 - Using the JavaScript language, have the function TimeConvert(num) take the num parameter being passed and return the number of hours and minutes the parameter converts to (ie. if num = 63 then the output should be 1:3). Separate the number of hours and minutes with a colon.
+
+
+    1. Get the hours by dividing by 60 and rounding down
+    2. Get the minutes by modulo 60 
+    3. Concatenate the numbers with a colon in between
+*/
+
+function TimeConvert(num) {
+    var hours = Math.floor(num / 60);
+    var minutes = Math.floor(num % 60);
+    if (minutes < 10) {
+        minutes = "0" + minutes;
+    }
+    num = hours + ":" + minutes;
+    return num.toString();
+}
+
+alert(TimeConvert(245));

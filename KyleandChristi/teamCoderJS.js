@@ -1,13 +1,18 @@
-﻿//Using the JavaScript language, have the function LetterCapitalize(str) take the str parameter being passed and capitalize 
-//the first letter of each word. Words will be separated by only one space. 
+﻿/* Lesson 6
 
-//Use the Parameter Testing feature in the box below to test your code with different arguments.
+Using the JavaScript language, have the function LetterCapitalize(str) take the str parameter being passed and capitalize 
+the first letter of each word. Words will be separated by only one space. 
+
+Use the Parameter Testing feature in the box below to test your code with different arguments.
+
+*/
 
 function letterCapitalize(str) {
     var myString = str.split(" ");
 
     for (var i = 0; i < myString.length; i++) {
-        myString[i] = myString[i].charAt(0).toUpperCase() + myString[i].substr(1);
+        //myString[i] = myString[i].charAt(0).toUpperCase() + myString[i].substr(1);
+        myString[i] = myString[i][0].toUpperCase() + myString[i].substr(1);
     }
 
      
@@ -15,8 +20,34 @@ function letterCapitalize(str) {
 
 }
 
-alert(letterCapitalize("We are Happy"));
 
-// keep this function call here 
-// to see how to enter arguments in JavaScript scroll down
-//LetterCapitalize(readline());
+//alert(letterCapitalize("We are Happy"));
+
+/*
+Challenge 7
+Using the JavaScript language, have the function SimpleSymbols(str) take the str parameter being passed and determine if it is an acceptable sequence by either returning the string true or false. The str parameter will be composed of + and = symbols with several letters between them (ie. ++d+===+c++==a) and for the string to be true each letter must be surrounded by a + symbol. So the string to the left would be false. The string will not be empty and will have at least one letter. 
+
+1. turn the string into an aray
+2. check the value of each character
+3. If the character is a letter
+4. Check the value of the characters to the left and right
+5. If those do not equal + plus symbols
+6. return false
+7. else true
+
+*/
+
+function SimpleSymbols(str) {
+    var alphabet = "abcdefghijklmnopqrstuvwxyz";
+    var correct = true;
+    var myArray = str.split("");
+    for (var i = 0; i < myArray.length; i++) {
+        var index = alphabet.indexOf(myArray[i]);
+        if (index !== -1 && (myArray[i - 1] !== "+" || myArray[i + 1] !== "+")) {
+            correct = false;
+        }
+    }
+    return correct;
+}
+
+alert(SimpleSymbols("f++d+"));

@@ -37,7 +37,7 @@ Using the JavaScript language, have the function SimpleSymbols(str) take the str
 
 */
 
-function SimpleSymbols(str) {
+/*function SimpleSymbols(str) {
     var alphabet = "abcdefghijklmnopqrstuvwxyz";
     var correct = true;
     var myArray = str.split("");
@@ -50,4 +50,30 @@ function SimpleSymbols(str) {
     return correct;
 }
 
-alert(SimpleSymbols("f++d+"));
+alert(SimpleSymbols("f++d+")); */
+
+
+
+/* Using the JavaScript language, have the function CheckNums(num1,num2) take both parameters being passed and 
+return the string true if num2 is greater than num1, otherwise return the string false. If the parameter values are 
+equal to each other then return the string -1. 
+
+    Use the Parameter Testing feature in the box below to test your code with different arguments. */
+
+function checkNums(num1, num2) {
+
+    if (num1 > num2) {
+        return "true";
+    }
+    else if (num1 < num2) {
+        return "false";
+    }
+
+    else {
+        return "-1";
+    }
+    
+
+}
+
+alert(checkNums(47, 47));

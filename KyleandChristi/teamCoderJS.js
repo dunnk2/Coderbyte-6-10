@@ -86,7 +86,7 @@ alert(checkNums(47, 47));
     1. Get the hours by dividing by 60 and rounding down
     2. Get the minutes by modulo 60 
     3. Concatenate the numbers with a colon in between
-*/
+
 
 function TimeConvert(num) {
     var hours = Math.floor(num / 60);
@@ -98,4 +98,24 @@ function TimeConvert(num) {
     return num.toString();
 }
 
-alert(TimeConvert(245));
+alert(TimeConvert(245)); 
+
+Using the JavaScript language, have the function AlphabetSoup(str) take the str string parameter being passed 
+and return the string with the letters in alphabetical order (ie. hello becomes ehllo). Assume numbers and punctuation 
+symbols will not be included in the string. 
+
+Use the Parameter Testing feature in the box below to test your code with different arguments. */
+
+function AlphabetSoup(str) {
+    
+    var myString = str.split("");
+    myString.sort();
+
+    
+    return myString.join("");
+
+}
+
+alert(AlphabetSoup("Christi"));
+// keep this function call here 
+// to see how to enter arguments in JavaScript scroll down
